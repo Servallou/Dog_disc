@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "dog-disc",
+  "version": "${version}",
+  "name": "dog-disc",
+  "description": "Adding lost disc dog C418",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/dog-disc/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "io.github.servmod.dogDisc.client.DogDiscClient"
+    ],
+    "main": [
+      "io.github.servmod.dogDisc.DogDisc"
+    ]
+  },
+  "mixins": [
+    "dog-disc.mixins.json",
+    {
+      "config": "dog-disc.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
